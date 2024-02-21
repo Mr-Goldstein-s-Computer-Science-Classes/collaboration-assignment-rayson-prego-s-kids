@@ -3,19 +3,20 @@ public class Gradebook {
 
     }//default constructor
 
-    double averageGrade;
-    double minimumGrade;
-    double maximumGrade;
+    double averageGradeOverall;
+    double minimumGradeOverall;
+    double maximumGradeOverall;
 
-    public double getAverageGrade(){
-        return averageGrade;
+    public double getAverageGradeOverall(){
+        return averageGradeOverall;
     }
-    public double getMinimumGrade(){
-        return minimumGrade;
+    public double getMinimumGradeOverall(){
+        return minimumGradeOverall;
     }
-    public double getMaximumGrade(){
-        return maximumGrade;
+    public double getMaximumGradeOverall(){
+        return maximumGradeOverall;
     }
+    
 
 
 }
