@@ -75,7 +75,7 @@ public class Gradebook{
 
     public Double getMinimumGrade(String assignment)
     {
-        double minimumGrade = 100.0
+        double minimumGrade = 100.0;
         for(Student student: students)
         {
             if(student.getAssignmentGrade(assignment) < minimumGrade)
