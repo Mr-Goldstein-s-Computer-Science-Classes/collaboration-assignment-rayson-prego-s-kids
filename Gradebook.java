@@ -8,9 +8,9 @@ public class Gradebook{
 
     private int index;
 
-    private ArrayList<String> gradedAssignmentsName;
+    private ArrayList<String> assignmentsName;
 
-    private ArrayList<Double> gradedAssignments;
+    private ArrayList<Double> assignmentGrades;
 
     private ArrayList<String> studentsName;
 
@@ -27,6 +27,9 @@ public class Gradebook{
     }//default constructor
 
     public Gradebook()
+    {
+
+    }
 
 
     public void createStudent(String name){
@@ -40,9 +43,8 @@ public class Gradebook{
 
     public void gradeAssignment(String assignment, String studentName, double grade){
         if(assignments.contains(assignment)){
-            gradedAssignmentsName.add(assignment);
-            gradedAssignments.add(grade);
-            studentsName.add(studentName);
+            assignmentGrades.add(grade);
+            students.add(studentName);
         }
     }
 
@@ -55,7 +57,7 @@ public class Gradebook{
         return gradedAssignments.get(index);
     }
 
-    public
+
     public double getAverageGradeOverall(){
         return averageGradeOverall;
     }
