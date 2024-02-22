@@ -8,10 +8,7 @@ public class Main {
         Student student5 = new Student("David");
         Student student6 = new Student("Patrick");
 
-        Gradebook gradebook1 = new Gradebook("Stacks and Queues Station Activity");
-        Gradebook gradebook2 = new Gradebook("Stacks and queues programs");
-        Gradebook gradebook3 = new Gradebook("Stacks and queues quiz");
-        Gradebook gradebook4 = new Gradebook("Github Exploration");
+        Gradebook gradebook = new Gradebook()
 
 
 
