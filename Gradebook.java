@@ -12,7 +12,7 @@ public class Gradebook{
 
     private ArrayList<Double> assignmentGrades;
 
-    private ArrayList<String> studentsName;
+
 
 
 
@@ -32,7 +32,8 @@ public class Gradebook{
     }
 
 
-    public void createStudent(String name){
+    public void createStudent(String name)
+    {
         Student student = new Student(name);
         students.add(student);
     }
@@ -41,35 +42,52 @@ public class Gradebook{
 
     }
 
-    public void gradeAssignment(String assignment, String studentName, double grade){
-        if(assignments.contains(assignment)){
-            assignmentGrades.add(grade);
-            students.add(studentName);
+    public void gradeAssignment(String assignment, String studentName, double grade)
+    {
+        Student student = new Student(studentName);
+        if(student != null && assignmentsName.contains(assignment))
+        {
+           student.gradeAssignment(assignment, grade);
         }
     }
 
 
-    public Double getAverageGrade(String assignment) {
+    public Double getAverageGrade(String assignment)
+    {
+        Double totalGrade = 0.0;
+        int assignmentCount = 0;
 
-
-        int index = gradedAssignmentsName.indexOf(assignment);
-
-        return gradedAssignments.get(index);
+        for(Student students : students)
+        {
+            double grade = students.getAssignmentGrade(assignment);
+            totalGrade += grade;
+            assignmentCount++;
+        }
+        return totalGrade/assignmentCount;
     }
 
 
-    public double getAverageGradeOverall(){
-        return averageGradeOverall;
+    public Double getAverageGradeOverall()
+    {
+        Double totalGrade = 0.0;
+        int studentCount = 0;
+
+        for(Student student : students)
+        {
+            totalGrade += student.getOverallGrade();
+            if(student.getOverallGrade() > 0)
+                studentCount++;
+        }
+        return totalGrade;
     }
-    public double getMinimumGradeOverall(){
+    
+    public double getMinimumGradeOverall()
+    {
         return minimumGradeOverall;
     }
-    public double getMaximumGradeOverall(){
+    public double getMaximumGradeOverall()
+    {
         return maximumGradeOverall;
     }
-
-
-
-
 
 }
