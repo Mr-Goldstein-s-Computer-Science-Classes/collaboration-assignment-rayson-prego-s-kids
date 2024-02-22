@@ -1,8 +1,5 @@
 import java.util.ArrayList;
 public class Gradebook{
-    private double averageGradeOverall;
-    private double minimumGradeOverall;
-    private double maximumGradeOverall ;
 
     private ArrayList<Student> students;
 
@@ -75,14 +72,40 @@ public class Gradebook{
         }
         return totalGrade;
     }
-    
-    public double getMinimumGradeOverall()
+
+    public Double getMinimumGrade(String assignment)
     {
-        return minimumGradeOverall;
+        double minimumGrade = 100.0
+        for(Student student: students)
+        {
+            if(student.getAssignmentGrade(assignment) < minimumGrade)
+            {
+                minimumGrade = student.getAssignmentGrade(assignment);
+            }
+        }
+        return minimumGrade;
     }
-    public double getMaximumGradeOverall()
+
+    public Double getMaximumGrade(String assignment)
     {
-        return maximumGradeOverall;
+        double maximumGrade = 0.0;
+        for(Student student: students)
+        {
+            if(student.getAssignmentGrade(assignment) > maximumGrade)
+            {
+                maximumGrade = student.getAssignmentGrade(assignment);
+            }
+        }
+        return maximumGrade;
+    }
+    
+    public Double getMinimumGradeOverall()
+    {
+        return null;
+    }
+    public Double getMaximumGradeOverall()
+    {
+        return null;
     }
 
 }
