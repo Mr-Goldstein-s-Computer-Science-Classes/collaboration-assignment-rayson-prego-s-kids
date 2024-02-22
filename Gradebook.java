@@ -3,7 +3,7 @@ public class Gradebook{
     private double averageGradeOverall;
     private double minimumGradeOverall;
     private double maximumGradeOverall ;
-    private ArrayList<String> assignments;
+
     private ArrayList<Student> students;
 
     private int index;
@@ -17,19 +17,14 @@ public class Gradebook{
 
 
 
-    public Gradebook(double averageGradeOverall, double minimumGradeOverall, double maximumGradeOverall){
-    this.assignments = new ArrayList<String>();
-    this.students = new ArrayList<Student>();
-    this.averageGradeOverall = averageGradeOverall;
-    this.minimumGradeOverall = minimumGradeOverall;
-    this.maximumGradeOverall = maximumGradeOverall;
-
-    }//default constructor
-
     public Gradebook()
     {
-
+    this.assignmentGrades = new ArrayList<Double>();
+    this.students = new ArrayList<Student>();
+    this.assignmentsName = new ArrayList<String>();
     }
+
+
 
 
     public void createStudent(String name)
@@ -38,7 +33,7 @@ public class Gradebook{
         students.add(student);
     }
     public void addAssignments(String assignment){
-        assignments.add(assignment);
+        assignmentsName.add(assignment);
 
     }
 
