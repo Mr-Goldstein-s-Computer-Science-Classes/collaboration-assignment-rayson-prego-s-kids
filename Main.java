@@ -8,8 +8,15 @@ public class Main {
         Student student5 = new Student("David");
         Student student6 = new Student("Patrick");
 
-        Gradebook gradebook = new Gradebook()
+        Gradebook gradebook1 = new Gradebook();
 
+
+        gradebook1.gradeAssignment("Stacks and Queues Station Activity", "Tyler", 94);
+        gradebook1.gradeAssignment("Stacks and Queues Station Activity", "James", 14);
+        gradebook1.gradeAssignment("Stacks and Queues Station Activity", "Ethan", 5);
+        gradebook1.gradeAssignment("Stacks and Queues Station Activity", "Scotty", 100);
+        gradebook1.gradeAssignment("Stacks and Queues Station Activity", "David", 0);
+        gradebook1.gradeAssignment("Stacks and Queues Station Activity", "Patrick", 79);
 
 
 
